@@ -1,0 +1,28 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="Async Await Demo" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+        </Grid.RowDefinitions>
+        <TextBlock x:Name="appTitle" FontSize="25" Margin="15" Grid.Row="1">Async Demo Application</TextBlock>
+        <Button x:Name="executeSync" Grid.Row="2" Margin="10" Click="ExecuteSync_Click">Get Data Synchronously</Button>
+        <Button x:Name="executeAsync" Grid.Row="3" Margin="10" Click="ExecuteAsync_Click">Get Data Async</Button>
+        <Button x:Name="executeAsyncTaskList" Grid.Row="4" Margin="10" Click="ExecuteAsyncTaskList_Click">Get Data Async List Tasks</Button>
+        <TextBlock x:Name="resultsWindow" Grid.Row="5" Margin="10"></TextBlock>
+        <TextBlock x:Name="Reference" Grid.Row="6" Margin="10">
+            <Hyperlink NavigateUri="https://www.youtube.com/watch?v=2moh18sh5p4" RequestNavigate="Hyperlink_OnRequestNavigate">Source: C# Async / Await - Make your app more responsive and faster with asynchronous programming</Hyperlink>
+        </TextBlock>
+    </Grid>
+</Window>
